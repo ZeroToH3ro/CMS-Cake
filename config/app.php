@@ -236,13 +236,13 @@ return [
              * are used in SMTP transports
              */
             'type' => 'smtp',
-            'host' => 'sandbox.smtp.mailtrap.io',
-            'port' => 2525,
+            'host' => 'localhost',
+            'port' => 1025,
             /*
              * It is recommended to set these options through your environment or app_local.php
              */
-            'username' => '290d92648184e6',
-            'password' => 'a299d38e702d43',
+            'username' => null,
+            'password' => null,
             'client' => null,
             'tls' => false,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
