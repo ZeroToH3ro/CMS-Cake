@@ -7,6 +7,7 @@ class ArticlesController extends AppController
 {
     public function index()
     {
+        throw new \Exception('abc');
         $this->loadComponent('Paginator');
         $articles = $this->Paginator->paginate($this->Articles->find());
         $this->set(compact('articles'));
@@ -27,7 +28,7 @@ class ArticlesController extends AppController
         if ($this->request->is('post')) {
             $article = $this->Articles->patchEntity($article, $this->request->getData());
 
-            // Hardcoding the user_id is temporary, and will be removed later
+            // Harding code the user_id is temporary, and will be removed later
             // when we build authentication out.
             $article->user_id = 1;
 
